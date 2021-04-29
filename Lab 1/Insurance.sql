@@ -38,12 +38,13 @@ insert into person values('A05','John','Hanumanth Nagar');
 select * from person;
 
 
-insert into car values('KA052250','Audi', 2019);
-insert into car values('KA031181','Lamborghini', 2014);
-insert into car values('KA035417','Mercedes',2020);
-insert into car values('KA041702','Lexus',2021);
-insert into car values('KA043408','Tesla',2020);
+insert into car values('KA052250','Indica', 1990);
+insert into car values('KA031181','Lancer', 1957);
+insert into car values('KA095477','Toyota',1998);
+insert into car values('KA053408','Honda',2008);
+insert into car values('KA041702','Audi',2005);
 select * from car;
+
 
 insert into accident values(11,'2003-01-01','Mysore Road');
 insert into accident values(12,'2004-02-02','Southend Circle');
@@ -60,20 +61,22 @@ insert into owns values('A05','KA043408');
 select * from owns;
 
 insert into participated values('A01','KA052250',11,10000);
-insert into participated values('A02','KA031181',12,50000);
-insert into participated values('A03','KA035417',13,25000);
-insert into participated values('A04','KA041702',14,3000);
-insert into participated values('A05','KA043408',15,5000);
+insert into participated values('A02','KA053408',12,50000);
+insert into participated values('A03','KA095477',13,25000);
+insert into participated values('A04','KA031181',14,3000);
+insert into participated values('A05','KA041702',15,5000);
 select * from participated;
+
 
 update participated set damage_amount=25000 where report_num=12;
 select * from participated;
 
 insert into person values('A06','Jospeh','Shanti Nagar');
-insert into car values('KA012370','Ferrari', 2014);
+insert into car values('KA012370','Honda', 2008);
 insert into accident values(16,'2008-01-01','MG Road');
 insert into owns values('A06','KA012370');
 insert into participated values('A06','KA012370',16,15000);
+
 
 select count(*) from accident where year(accident_date)=2008;
 
